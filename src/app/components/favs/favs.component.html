@@ -1,0 +1,9 @@
+<div class="container">
+    <app-search (sendSearchTextToFavs)=searchFavs($event) [headText] = "'View Banks'" ></app-search>
+    
+    <div class="fav-text">Favourites</div>
+    <app-list *ngIf = "data.banksList.length" [data] = "data" ></app-list>
+    <div class="indicator no-data" *ngIf = "!data.banksList.length">
+        No Data Found
+    </div>
+</div>

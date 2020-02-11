@@ -1,0 +1,77 @@
+.list {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    table-layout: auto;
+
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-right: 1px solid lightgray;
+
+  }
+
+  th {
+      // border-right: 1px solid lightgray;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  .pagination{ 
+    // max-width: 50%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    margin-top: 10px;
+    background-color: beige;
+    float: right;
+    .page-number {
+    // color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    }
+  }
+
+  .page-number:hover { 
+    background-color: dodgerblue;
+    color: white; 
+    opacity: 0.9;
+  }
+
+  
+  .active {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+  .star-icon {
+    cursor: pointer;
+    color: lightgray;
+  }
+  .fill-star {
+    color: goldenrod;
+  }
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .bank-name {
+    cursor: pointer;
+  }
+
+  .bank-name:hover {
+    background-color: #2eb79a;
+    color: white;
+  }
+
+  @media(max-width: 768px) {
+    .list {
+      font-size: 10px;
+    }
+  }

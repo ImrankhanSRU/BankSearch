@@ -1,0 +1,10 @@
+<div class="flex flex-column container">
+    <app-search (outputToParent)=getBanksList($event) [headText] = "'View Favourites'" ></app-search>
+    <app-list *ngIf="data.banksList.length" [data]="data"></app-list>
+
+    <div *ngIf = "!data.banksList.length && !data.searchText.length" class="loader indicator"></div>
+    <div class="indicator no-data" *ngIf = "!data.banksList.length && data.searchText.length">
+        No Data Found
+    </div>
+
+</div>

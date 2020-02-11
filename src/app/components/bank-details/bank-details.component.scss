@@ -1,0 +1,33 @@
+.card {
+    padding: 10px;
+    background-color: #b0ffe2;
+    // color: white;
+    width: 35%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.card-row {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    
+    .prop-head {
+        font-weight: bold;
+        width: 30%;
+        text-align: left;
+    }
+
+    .row-value {
+        width: 70%;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .card {
+        width: 80%;
+        padding: 20px;
+    }
+}
+

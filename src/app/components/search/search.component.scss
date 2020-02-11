@@ -1,0 +1,39 @@
+.search-container {
+    justify-content: space-between;
+    // justify-content: space-around;
+}
+
+.drop-down {
+    margin-right: 20px;
+    border: none;
+    outline: none;
+}
+
+.search-box {
+    border: 1px solid lightgray;
+    outline:none;
+    min-width: 300px;
+}
+
+.page-text {
+    margin-right: 10px;
+}
+
+.fav-button {
+    margin-top: 10px;
+}
+
+
+
+@media(max-width: 768px) {
+    .search-box {
+        min-width: 0;
+    }
+    .drop-down {
+        margin-bottom: 10px;
+    }
+    .right-div {
+        width: 220px;
+        // width: 30%;
+    }
+}

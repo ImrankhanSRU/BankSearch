@@ -1,0 +1,33 @@
+<div style="overflow-x:auto;">
+    <table class="list">
+        <tr>
+            <th>IFSC</th>
+            <th>Branch</th>
+            <th>Bank Name</th>
+            <th>Address</th>
+            <th>Favourites</th>
+        </tr>
+        <tr *ngFor="let bank of list[activePage - 1]; let i = index;">
+            <td>{{bank.ifsc}}</td>
+            <td>{{bank.branch}}</td>
+            <td (click) = "goToBankDetails(bank.ifsc)" class="bank-name" >{{bank.bank_name}}</td>
+            <td>{{bank.address}}</td>
+            <td style="text-align: center;">
+                <fa-icon (click)="toggleFav(bank)" [icon]="starIcon"
+                    [ngClass]="{'star-icon': true, 'fill-star': isFav(bank.ifsc).length }"></fa-icon>
+            </td>
+
+        </tr>
+    </table>
+
+</div>
+
+<div class="pagination">
+    <div class="page-number" (click)="goToEnd('first')">&laquo;</div>
+    <div *ngFor="let page of pages; let i = index;">
+        <div (click)="pageChange(page)" [ngClass]="{'page-number': true, 'active': page == activePage}">
+            {{page}}
+        </div>
+    </div>
+    <div class="page-number" (click)="goToEnd('last')">&raquo;</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="flex-box flex-row search-container">
+    <div>
+        <select *ngIf = "headText == 'View Favourites' " [(ngModel)]="selectedCity" class="drop-down border-5 padding-primary primary-button"
+            (change)="handleCityChange()">
+            <option>Bengaluru</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+            <option>Kolkata</option>
+        </select>
+        <input [(ngModel)]="searchText" (ngModelChange)="handleSearchChange()" class="search-box border-5 padding-primary"
+            type="text" placeholder="Search..." />
+    </div>
+    <div class="right-div">
+        <div>
+            <label class="page-text">Page Size</label>
+            <select (change)="handlePageSizeChange($event)" [(ngModel)]="pageSize">
+                <option value=10>10</option>
+                <option value=20>20</option>
+                <option value=50>50</option>
+                <option value=100>100</option>
+            </select>
+        </div>
+        <div *ngIf = "bankSearch.getFavs().length || headText == 'View Banks' " (click) = "goToFavs()" class="primary-button padding-primary fav-button">
+            {{headText}}
+        </div>
+    </div>
+</div>
