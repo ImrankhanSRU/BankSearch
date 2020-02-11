@@ -14,4 +14,3 @@ On clicking of bank name from list it will navigate to bank details page.
 You can add or remove favourite.
 On click of star in list user can toggle the favourite.
 If minimum one bank selected as favourite than view favourites button will be visible below page size.
-In favourites page user can do all the functionalities which are available in banks page.
